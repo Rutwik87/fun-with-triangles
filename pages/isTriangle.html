@@ -8,7 +8,66 @@
     <link rel="stylesheet" href="../styles/triangles.css">
 </head>
 <body>
-    is triangle
-    <script src="./IsTriangle/app.js"></script>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="nav-logo">Fun With Triangles</a>
+            <ul class="nav-menu">
+                <li class="nav-item" id="quiz">
+                    <a href="../pages/quiz.html" class="nav-link">Quiz</a>
+                </li>
+                <li class="nav-item" id="hypotenuse">
+                    <a href="../pages/hypotenuse.html" class="nav-link">Hypotenuse</a>
+                </li>
+                <li class="nav-item" id="area">
+                    <a href="../pages/area.html" class="nav-link">Area</a>
+                </li>
+                <li class="nav-item" id="triangle">
+                    <a href="../pages/isTriangle.html" class="nav-link">isTriangle</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Angles of Triangle</h2>
+        <form action="" id="form">
+          <label for="angle1">Angle 1 : </label>
+          <input type="number" name="angle1" />
+          <label for="angle2">Angle 2 : </label>
+          <input type="number" name="angle2" />
+          <label for="angle3">Angle 3 : </label>
+          <input type="number" name="angle3" />
+          <button type="submit">Is Triangle?</button>
+        </form>
+  
+        <h2 id="result"></h2>  
+    </div>
+
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+    <script src="../scripts/triangles.js"></script>
 </body>
 </html>

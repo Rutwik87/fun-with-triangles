@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
 body{
-    background-color:orange;
+    background-color:#E4D8DC;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    padding: 10em 0;
+    font-family: 'Urbanist', sans-serif;
+    color:#5E454B;
 }
+
+.box {
+    background-color: #C9CCD5;
+    padding: 1em;
+    border-radius: 2em;
+}
+
+h2 {
+    background-color:#93B5C6;
+    padding: 0.5em;
+    margin: 1em 2em;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0.5em;
+}
+
+a {
+    text-decoration: none;
+    color:black; 
+ }

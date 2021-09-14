@@ -8,7 +8,52 @@
     <link rel="stylesheet" href="../styles/hypotenuse.css">
 </head>
 <body>
-    hypotenuse
-    <script src="./Hypotenuse/app.js"></script>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="nav-logo">Fun With Triangles</a>
+            <ul class="nav-menu">
+                <li class="nav-item" id="quiz">
+                    <a href="../pages/quiz.html" class="nav-link">Quiz</a>
+                </li>
+                <li class="nav-item" id="hypotenuse">
+                    <a href="../pages/hypotenuse.html" class="nav-link">Hypotenuse</a>
+                </li>
+                <li class="nav-item" id="area">
+                    <a href="../pages/area.html" class="nav-link">Area</a>
+                </li>
+                <li class="nav-item" id="triangle">
+                    <a href="../pages/isTriangle.html" class="nav-link">isTriangle</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+    <script src="../scripts/hypotenuse.js"></script>
 </body>
 </html>

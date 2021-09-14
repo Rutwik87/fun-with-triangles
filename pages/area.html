@@ -8,7 +8,65 @@
     <link rel="stylesheet" href="../styles/area.css">
 </head>
 <body>
-    area
-    <script src="./Area/app.js"></script>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="nav-logo">Fun With Triangles</a>
+            <ul class="nav-menu">
+                <li class="nav-item" id="quiz">
+                    <a href="../pages/quiz.html" class="nav-link">Quiz</a>
+                </li>
+                <li class="nav-item" id="hypotenuse">
+                    <a href="../pages/hypotenuse.html" class="nav-link">Hypotenuse</a>
+                </li>
+                <li class="nav-item" id="area">
+                    <a href="../pages/area.html" class="nav-link">Area</a>
+                </li>
+                <li class="nav-item" id="triangle">
+                    <a href="../pages/isTriangle.html" class="nav-link">isTriangle</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Calculate Area of a triangle</h2>
+            <form action="" id="form">
+                <label for="first-side">Enter first side length: </label>
+                <input type="number" name="firstSide"/>
+                <label for="second-side">Enter the second side length: </label>
+                <input type="number" name="secondSide" />
+                <label for="third-side">Enter the third side length: </label>
+                <input type="number" name="thirdSide" />
+                <button type="submit">Calculate Area</button>
+            </form>
+
+      <h2 id="result"></h2>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+    <script src="../scripts/area.js"></script>
 </body>
 </html>
