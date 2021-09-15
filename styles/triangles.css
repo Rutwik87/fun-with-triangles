@@ -85,6 +85,10 @@ li{
     color: #03071e;
   }
 
+  form label{
+    font-size:1.5rem;
+  }
+
   form input {
     border: none;
     border-radius: 0.5em;
