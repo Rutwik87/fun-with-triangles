@@ -5,7 +5,7 @@ form.addEventListener('submit' , function(e){
     e.preventDefault();
     const base = this.base.value;
     const height = this.height.value;
-    if(base === "" || height === ""){
+    if(base === "" || height === "" || base < 0 || height < 0){
         result.innerText= "Invalid Input !!!";
     }
     else{
