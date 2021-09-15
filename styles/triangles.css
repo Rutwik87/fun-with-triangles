@@ -67,7 +67,7 @@ li{
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin-top: 1rem;
     align-items: center;
 }
 
