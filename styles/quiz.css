@@ -22,42 +22,22 @@ a {
 
 li{
     list-style: none;
+    display: inline;
 }
 
 .header{
+    text-align: center;
     background-color:#E4D8DC;
     border-bottom: 1px solid black;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
+.navbar{
+    text-align: center;
+    padding:1rem;
 }
 
-.hamburger {
-    display: none;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-item {
-    margin-left: 3rem;
+.nav-item{
+    padding: 1em;
 }
 
 .nav-link{
@@ -70,7 +50,8 @@ li{
     color:#072166;
 }
 
-.nav-logo {
+.home {
+
     font-size: 2.1rem;
     font-weight: 500;
     color: black;
@@ -81,36 +62,80 @@ li{
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 5rem;
-        flex-direction: column;
-        background-color: #C9CCD5;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
-    }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    background-color: #C9CCD5;
+  }
 
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 2.5rem 0;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
-    #quiz a{
-        color:#072166;
-    }
-
-}
+.bx1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8em;
+    padding: 0.5em;
+    text-align: center;
+    color: black ;
+  }
+  
+  form {
+    width: 50%;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.8em;
+    background-color: #457b9d;
+    padding: 1em;
+    border-radius: 0.6em;
+  }
+  
+  form p {
+    text-align: left;
+    margin-top: 0.7em;
+    color: black;
+  }
+  
+  .bx2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+  
+  .bx2 label {
+    margin-bottom: 1em;
+    color: black;
+  }
+  
+  #submit {
+    padding: 0.4em 0.8em;
+    margin: 2em 1em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 0.5em;
+    margin: auto;
+  }
+  
+  #reset {
+    padding: 0.4em 0.8em;
+    margin: 2em 1em;
+    background-color: #457b9d;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 0.4em;
+  }
+  
+  #score {
+    margin-top: 0.5em;
+    margin-bottom: 3em;
+    color: black;
+    font-size: 1.8em;
+  }
