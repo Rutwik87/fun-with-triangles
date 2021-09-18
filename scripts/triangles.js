@@ -4,7 +4,7 @@ const result = document.querySelector('#result')
 form.addEventListener('submit' , function(e){
     e.preventDefault()
     if ( this.angle1.value === "" || this.angle2.value === "" || this.angle3.value === "" 
-        || this.angle1.value < 0 || this.angle2.value < 0 || this.angle3.value < 0){
+        || this.angle1.value <= 0 || this.angle2.value <= 0 || this.angle3.value <= 0){
         result.innerText = "Invalid Input !!!";
     }
     else {
